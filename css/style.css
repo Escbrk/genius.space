@@ -47,6 +47,7 @@
   overflow: hidden;
 }
 
+
 h1,
 h2,
 h3,
@@ -60,11 +61,11 @@ p {
 * {
   scroll-behavior: smooth;
   list-style: none;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 a {
-  display: inline-block; 
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -267,8 +268,8 @@ address {
 }
 
 .chiefs-title {
-  max-width: 520px;
   margin: 0 auto 80px;
+  position: relative;
 }
 
 .formats-title,
@@ -304,9 +305,10 @@ address {
 
 .chiefs-title::after,
 .chiefs-title::before {
-  display: block;
+  position: absolute;
+  bottom: 24px;
   content: "";
-  /* width: 352px; */
+  width: 352px;
 
   /* 
   height: 2px;
@@ -315,6 +317,14 @@ address {
 
   border: 2px solid #cfcfbc;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.chiefs-title::before {
+  left: 0;
+}
+
+.chiefs-title::after {
+  right: 0;
 }
 
 .chiefs-name {
@@ -422,6 +432,8 @@ footer {
   background-size: cover;
   background-position: center;
   padding: 32px 0;
+
+  position: relative;
 }
 
 footer > .container {
@@ -451,4 +463,70 @@ footer > .container {
 
 .footer-icon:hover {
   fill: var(--brand-light);
+}
+
+footer::before,
+footer::after {
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+footer::before {
+  background-image: url("../img/decor-bread-left.png");
+  width: 180px;
+  height: 120px;
+  left: 0;
+}
+
+footer::after {
+  background-image: url("../img/decor-bread-right.png");
+  width: 380px;
+  height: 190px;
+  right: 0;
+}
+
+/*! Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: rgb(49, 38, 26, 0.5);
+}
+
+.backdrop.is-hidden {
+  /* display: none; */
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 880px;
+  height: 880px;
+  border-radius: 32px;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--primary-light);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  border: none;
+  background-color: transparent;
 }
