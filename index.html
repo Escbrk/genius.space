@@ -150,19 +150,47 @@
       </section>
       <section class="container section form">
         <div>
-          <h2 class="general-title contacts-title">
-            Присоеденяйся к сети пекарень
-          </h2>
-          <p>Заполни форму, чтобы ми связались з тобой!</p>
-          <form>
-            <input type="text" placeholder="Имя" />
-            <input type="number" placeholder="Телефон" />
-            <input type="email" placeholder="Электронная почта" />
-            <button class="button" type="submit">Заказать звонок</button>
+          <div class="form-text">
+            <h2 class="general-title contacts-title">
+              Присоеденяйся к сети пекарень
+            </h2>
+            <p>Заполни форму, чтобы ми связались з тобой!</p>
+          </div>
+          <form class="contact-form">
+            <label class="visually-hidden" for="user-name">Name</label>
+            <input
+              class="contact-form-input"
+              id="user-name"
+              name="user-name"
+              type="text"
+              placeholder="Name"
+            />
+
+            <label class="visually-hidden" for="phone-num">Phone Number</label>
+            <input
+              class="contact-form-input"
+              id="phone-num"
+              name="phone-num"
+              type="tel"
+              placeholder="Phone number"
+            />
+
+            <label class="visually-hidden" for="user-email">Email</label>
+            <input
+              class="contact-form-input"
+              id="user-email"
+              name="user-email"
+              type="email"
+              placeholder="Email"
+            />
+
+            <button class="button form-btn" type="submit">
+              Заказать звонок
+            </button>
           </form>
-          <p>
-            Нажимая на кнопку я соглашаюсь с
-            <a href="#">политикой конфиденциальности</a>
+          <p class="policy-text">
+            Нажимая на кнопку я соглашаюсь 
+            <a class="form-link" href="#">c политикой конфиденциальности</a>
           </p>
         </div>
         <iframe
@@ -236,42 +264,56 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
-        <button type="button" class="modal-close-btn">X</button>
-        <h2>Заказать звонок</h2>
-        <p>Оставьте заявку и наш специалист свяжется з Вами!</p>
-        <form name="contact-form" autocomplete="off">
-          <label for="user-name"></label>
+        <button type="button" class="modal-close-btn">
+          ❌
+          <!-- <svg>
+            <use href="./img/icons.svg#icon-x"></use>
+          </svg> -->
+        </button>
+        <div class="form-text">
+          <h2>Заказать звонок</h2>
+          <p>Оставьте заявку и наш специалист свяжется з Вами!</p>
+        </div>
+        <form
+          class="contact-form modal-el"
+          name="contact-form"
+          autocomplete="off"
+        >
+          <label class="visually-hidden" for="user-name">Name</label>
           <input
+            class="contact-form-input modal-el"
             id="user-name"
             name="user-name"
             type="text"
             placeholder="Name"
           />
 
-          <label for="phone-num"></label>
+          <label class="visually-hidden" for="phone-num">Phone Number</label>
           <input
+            class="contact-form-input modal-el"
             id="phone-num"
             name="phone-num"
             type="tel"
             placeholder="Phone number"
           />
 
-          <label for="user-email"></label>
+          <label class="visually-hidden" for="user-email">Email</label>
           <input
+            class="contact-form-input modal-el"
             id="user-email"
             name="user-email"
             type="email"
             placeholder="Email"
           />
 
-          <button type="submit">Заказать звонок</button>
-          <p>
-            Натискаючи на кнопку я погоджуюсь з
-            <a href="#">політикою конфіденційності</a>
-          </p>
+          <button class="button modal-el" type="submit">Заказать звонок</button>
         </form>
+        <p class="policy-text modal-el">
+          Нажимая на кнопку я соглашаюсь
+          <a class="form-link" href="#">c политикой конфиденциальности</a>
+        </p>
       </div>
     </div>
 
