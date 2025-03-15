@@ -164,6 +164,7 @@
               name="user-name"
               type="text"
               placeholder="Name"
+              required
             />
 
             <label class="visually-hidden" for="phone-num">Phone Number</label>
@@ -173,6 +174,7 @@
               name="phone-num"
               type="tel"
               placeholder="Phone number"
+              required
             />
 
             <label class="visually-hidden" for="user-email">Email</label>
@@ -182,14 +184,15 @@
               name="user-email"
               type="email"
               placeholder="Email"
+              required
             />
 
-            <button class="button form-btn" type="submit">
+            <button class="button form-btn" type="submit" disabled>
               Заказать звонок
             </button>
           </form>
           <p class="policy-text">
-            Нажимая на кнопку я соглашаюсь 
+            Нажимая на кнопку я соглашаюсь
             <a class="form-link" href="#">c политикой конфиденциальности</a>
           </p>
         </div>
@@ -264,7 +267,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           ❌
@@ -288,6 +291,7 @@
             name="user-name"
             type="text"
             placeholder="Name"
+            required
           />
 
           <label class="visually-hidden" for="phone-num">Phone Number</label>
@@ -297,6 +301,7 @@
             name="phone-num"
             type="tel"
             placeholder="Phone number"
+            required
           />
 
           <label class="visually-hidden" for="user-email">Email</label>
@@ -306,10 +311,20 @@
             name="user-email"
             type="email"
             placeholder="Email"
+            required
           />
 
           <button class="button modal-el" type="submit">Заказать звонок</button>
         </form>
+
+        <!-- !Custom checkbox
+        <div class="terms">
+          <input class="terms-input" type="checkbox" name="terms" id="terms" />
+          <label class="terms-label" for="terms"
+            >я соглашаюсь c политикой конфиденциальности</label
+          >
+        </div> -->
+
         <p class="policy-text modal-el">
           Нажимая на кнопку я соглашаюсь
           <a class="form-link" href="#">c политикой конфиденциальности</a>

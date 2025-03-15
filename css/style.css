@@ -214,6 +214,14 @@ address {
   transition: background-color 0.5s linear;
 }
 
+.button:disabled,
+.button:disabled:hover {
+  background-color: lightgray;
+  border-color: currentColor;
+  color: gray;
+  cursor: not-allowed;
+}
+
 .button:hover {
   color: var(--brand-dark);
   background-color: transparent;
@@ -646,5 +654,32 @@ footer::after {
 
 .form .policy-text {
   max-width: 300px;
-  margin: 0 auto
+  margin: 0 auto;
 }
+
+
+/*! Custom checkbox */
+/* .terms {
+  position: relative;
+}
+
+.terms-input {
+  appearance: none;
+}
+
+.terms-label::before {
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid red;
+}
+
+.terms-input:checked + .terms-label::before {
+  background-color: green;
+  border-color: transparent;
+} */
