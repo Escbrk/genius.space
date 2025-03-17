@@ -1,0 +1,31 @@
+.header-nav-list {
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.header {
+  position: relative;
+  top: 32px;
+}
+
+.header > div {
+  display: flex;
+  gap: 152px;
+  position: absolute;
+}
+
+.header-nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 152px;
+}
+
+// .header-nav-list,
+// .header-nav,
+// .header {
+//   display: flex;
+//   justify-content: space-between;
+// }

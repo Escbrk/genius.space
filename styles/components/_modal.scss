@@ -1,0 +1,47 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(49, 38, 26, 0.5);
+  padding: 20px;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.backdrop.is-hidden {
+  // display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  padding: 128px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  border-radius: 32px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-light);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: none;
+  background-color: transparent;
+}
+.modal-close-btn > svg {
+  width: 32px;
+  height: 32px;
+}

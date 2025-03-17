@@ -1,0 +1,33 @@
+.button {
+  color: var(--primary-light);
+  background-color: var(--brand-light);
+  border: 2px solid var(--brand-light);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 16px 32px;
+  transition: background-color 0.5s linear;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: lightgray;
+  border-color: currentColor;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  color: var(--brand-dark);
+  background-color: transparent;
+}
+
+.button.modal-el {
+  align-self: center;
+  margin-bottom: 24px;
+}
+
+// .button.form-btn{
+//   margin-bottom: 16px;
+// } 
