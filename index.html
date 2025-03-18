@@ -7,21 +7,21 @@
 
     <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style.min.css" />
   </head>
 
   <body>
     <header class="header container">
       <div>
-        <nav class="header-nav">
+        <nav class="header__nav">
           <a href="/"><img src="./img/logo.svg" alt="logo" /></a>
-          <ul class="header-nav-list">
+          <ul class="header__nav-list">
             <li>
-              <a href="#traditions" class="active nav-link">Наши традиции</a>
+              <a href="#traditions" class="nav-link">Наши традиции</a>
             </li>
-            <li><a href="#chiefs" class="active nav-link">Шеф-повары</a></li>
-            <li><a href="#formats" class="active nav-link">Форматы</a></li>
-            <li><a href="#address" class="active nav-link">Контакты</a></li>
+            <li><a href="#chiefs" class="nav-link">Шеф-повары</a></li>
+            <li><a href="#formats" class="nav-link">Форматы</a></li>
+            <li><a href="#address" class="nav-link">Контакты</a></li>
           </ul>
         </nav>
         <button class="button modal-open-btn" type="button">
@@ -32,7 +32,7 @@
 
     <main>
       <section class="hero-section">
-        <h1 class="hero-title container"><span>Modern</span> Bakery</h1>
+        <h1 class="hero-section__title container"><span>Modern</span> Bakery</h1>
       </section>
       <section class="section traditions-section" id="traditions">
         <div class="traditions-container">
@@ -111,6 +111,11 @@
           </button>
           <ul class="formats-list">
             <li class="formats-item">
+              <img
+                class="formats-img"
+                src="./img/walrus_img.jpg"
+                alt="walrus"
+              />
               <h3 class="format-title" lang="en ">Walrus</h3>
               <div class="formats-text-container">
                 <p>Площа: до 120 м2</p>
@@ -123,20 +128,36 @@
               </div>
             </li>
             <li class="formats-item">
+              <img
+                class="formats-img"
+                src="./img/horseshoe_img.jpg"
+                alt="horseshoe"
+              />
               <h3 class="format-title" lang="en ">Horseshoe</h3>
               <div class="formats-text-container">
                 <p>Площа: до 25 м2</p>
                 <p>Меню: найпопулярніші позиції меню</p>
-                <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
+                <p>
+                  Штат: 2 продавці-касири, 2 пекарі, 1 <br />
+                  помічник пекаря
+                </p>
                 <p>Посадкові місця: відсутні</p>
               </div>
             </li>
             <li class="formats-item">
+              <img
+                class="formats-img"
+                src="./img/handlebar_img.jpg"
+                alt="handlebar"
+              />
               <h3 class="format-title" lang="en ">Handlebar</h3>
               <div class="formats-text-container">
                 <p>Площа: до 15 м2</p>
                 <p>Меню: найпопулярніші позиції меню</p>
-                <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
+                <p>
+                  Штат: 1 продавець, 1 пекар, 1 помічник <br />
+                  пекаря
+                </p>
                 <p>Посадкові місця: відсутні</p>
               </div>
             </li>
@@ -267,7 +288,7 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           ❌
